@@ -90,7 +90,7 @@ const upload = multer({
         fileSize: 1000000
     },
     fileFilter (req, file, cb) {
-        if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {                       // refer to video number 122 onwards
+        if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {                       //122 onwards
             return cb(new Error('Please upload an image'))
         }
         cb(undefined, true)
